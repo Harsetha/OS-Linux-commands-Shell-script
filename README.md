@@ -499,38 +499,64 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet....com
+```
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet.com
+```
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
-
+```
+bench.py
+hello.c
+hello.js
+readme.txt
+urllist.txt
+```
 mkdir backupdir
  
 mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
-
+```
+-rw-r--r-- root/root       114 2020-07-05 23:17:07 bench.py
+-rw-r--r-- root/root        76 2020-07-03 14:45:56 hello.c
+-rw-r--r-- root/root        22 2020-06-26 14:57:33 hello.js
+-rw-r--r-- root/root       151 2020-07-05 23:19:13 readme.txt
+-rw-r--r-- root/root        52 2024-02-29 20:51:39 urllist.txt
+```
 tar -xvf backup.tar
 ## OUTPUT
-
+```
+bench.py
+hello.c
+hello.js
+readme.txt
+urllist.txt
+```
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+ ```
+ls: .gz: No such file or directory
+```
 gunzip backup.tar.gz
 ## OUTPUT
-
+```
+gzip: backup.tar.gz: No such file or directory
+```
  
 # Shell Script
 ```
